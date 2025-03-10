@@ -9,9 +9,6 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-#SUPER USER
-#Username:ricardos
-#Password:1223
 
 from pathlib import Path
 
@@ -80,18 +77,14 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'LittleLemon',
+        'NAME': 'test',
+        'HOST' : '127.0.0.1',
+        'PORT' : '3306',
         'USER' : 'root',
         'PASSWORD' : 'pito1223',
         # My database password is 'pito1223' but im gonna leave the default meta project password for the peer-review.
         # Meta project default password is'root@123'
-        'HOST' : '127.0.0.1',
-        'PORT' : '3306',
-        'OPTIONS':{
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
     }
-
 }
 
 
